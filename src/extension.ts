@@ -90,15 +90,13 @@ function replaceClass(classesString: string, filter: Filter) {
   return output;
 }
 function replaceClasses(classesString: string) {
-  // Regex removes all multiple spaces
+  // Regex removes multiple spaces
   let output = classesString.replace(/\s\s+/g, " ");
   filters.forEach((filter) => {
     output = replaceClass(output, filter);
   });
   return output;
 }
-
-// replaceClasses(classesString, filters);
 
 function formatDocument(text: string) {
   let outputText = "";
