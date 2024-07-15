@@ -108,7 +108,7 @@ function formatDocument(text) {
         const currentTag = restOfText.substring(startsAt, endsAt);
         // find if the node has a class attribute
         const classStartsAt = currentTag.indexOf('class="') + 7;
-        const classEndsAt = currentTag.indexOf('"', classStartsAt + 7);
+        const classEndsAt = currentTag.indexOf('"', classStartsAt);
         if (classStartsAt > 7) {
             // find the current classes and replace them
             const appendedClasses = currentTag.substring(classStartsAt, classEndsAt);
